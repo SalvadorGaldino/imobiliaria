@@ -1,0 +1,7 @@
+PASTA: img/hero/
+Foto principal do banner do topo do site.
+
+Arquivo esperado:
+  hero-principal.jpg
+
+Tamanho ideal: 1920 x 900 px (horizontal)

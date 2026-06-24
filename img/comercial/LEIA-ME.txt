@@ -1,0 +1,5 @@
+PASTA: img/comercial/
+Fotos de imoveis COMERCIAIS (salas, lojas, galpoes).
+Use quando adicionar cards comerciais no HTML.
+
+Tamanho ideal: 600 x 400 px

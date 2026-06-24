@@ -1,0 +1,8 @@
+PASTA: img/lancamentos/
+Fotos dos LANCAMENTOS (usado em 2 lugares na pagina).
+
+Arquivos esperados:
+  canto-do-mar-guaratuba.jpg
+  terraco-pontal.jpg
+
+Tamanho ideal: 800 x 500 px

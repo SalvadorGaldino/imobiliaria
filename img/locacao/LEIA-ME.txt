@@ -1,0 +1,7 @@
+PASTA: img/locacao/
+Fotos dos imoveis para LOCACAO.
+
+Arquivo esperado:
+  apto-beira-mar-matinhos.jpg
+
+Tamanho ideal: 600 x 400 px

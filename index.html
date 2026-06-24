@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizonte Imóveis — Encontre o imóvel certo para cada fase da sua vida</title>
+<meta name="description" content="Imobiliária especializada em compra, venda e locação de imóveis residenciais e comerciais no litoral do Paraná.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container header-row">
+    <a href="#topo" class="logo logo-text">
+      <span class="logo-small">Horizonte</span>
+      <span class="logo-big">Imóveis</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#topo" class="active">Início</a></li>
+
+        <li class="has-mega">
+          <a href="#residencial">Residencial <span class="caret">▾</span></a>
+          <div class="mega-panel">
+            <div class="mega-col">
+              <h4><a href="#casas">Casas</a></h4>
+              <ul>
+                <li><a href="#casa-condominio">Em condomínio</a></li>
+                <li><a href="#casa-independente">Independente</a></li>
+                <li><a href="#temporada">De praia</a></li>
+                <li><a href="#fazenda">De campo</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4><a href="#apartamentos">Apartamentos</a></h4>
+              <ul>
+                <li><a href="#apto-studio">Studio</a></li>
+                <li><a href="#apto-1dorm">1 dormitório</a></li>
+                <li><a href="#apto-2dorm">2 dormitórios</a></li>
+                <li><a href="#apto-3dorm">3 dormitórios</a></li>
+                <li><a href="#apto-cobertura">Cobertura</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4><a href="#terrenos">Terrenos</a></h4>
+              <ul>
+                <li><a href="#terreno-urbano">Urbano</a></li>
+                <li><a href="#terreno-condominio">Em condomínio</a></li>
+                <li><a href="#terreno-loteamento">Loteamento</a></li>
+              </ul>
+            </div>
+            <a href="#residencial" class="mega-cta">Ver todos<br><span>os imóveis</span></a>
+          </div>
+        </li>
+
+        <li class="has-mega">
+          <a href="#comercial">Comercial <span class="caret">▾</span></a>
+          <div class="mega-panel">
+            <div class="mega-col">
+              <h4><a href="#comercial-salas">Salas</a></h4>
+              <ul>
+                <li><a href="#sala-comercial">Sala comercial</a></li>
+                <li><a href="#sala-conjunto">Conjunto</a></li>
+                <li><a href="#sala-andar">Andar corporativo</a></li>
+              </ul>
+            </div>
+            <div class="mega-col">
+              <h4><a href="#comercial-pontos">Pontos</a></h4>
+              <ul>
+                <li><a href="#loja-galeria">Loja em galeria</a></li>
+                <li><a href="#loja-rua">Loja de rua</a></li>
+                <li><a href="#galpao">Galpão</a></li>
+              </ul>
+            </div>
+            <a href="#comercial" class="mega-cta">Ver todos<br><span>os comerciais</span></a>
+          </div>
+        </li>
+
+        <li><a href="#lancamentos">Lançamentos</a></li>
+        <li><a href="#locacao">Locação</a></li>
+        <li><a href="#temporada">Temporada</a></li>
+        <li><a href="#fazenda">Fazendas</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <div class="header-phone">
+        <small>Atendimento</small>
+        <strong>(41) 99707-5291</strong>
+      </div>
+      <a href="https://www.instagram.com/heitorsalvador100/" target="_blank" rel="noopener" class="btn-instagram" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="#" class="btn btn-primary btn-sm" data-wa="5541997075291" data-wa-msg="Olá! Vim pelo site e gostaria de mais informações sobre imóveis.">
+        Falar agora
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="hero-bg">
+    <img src="img/hero/hero-principal.jpg" alt="Imóvel à beira-mar no litoral do Paraná" class="hero-bg-img">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Compra · Venda · Locação</span>
+      <h1>O imóvel certo existe. <em>A gente te ajuda a encontrar.</em></h1>
+      <p>Mais de 200 opções no litoral do Paraná — casas, apartamentos, terrenos e imóveis comerciais. Corretores especializados, atendimento honesto.</p>
+
+      <!-- barra de busca rápida -->
+      <div class="hero-search">
+        <div class="search-tabs">
+          <button class="stab active" data-tab="comprar">Comprar</button>
+          <button class="stab" data-tab="alugar">Alugar</button>
+          <button class="stab" data-tab="lançamento">Lançamento</button>
+        </div>
+        <div class="search-bar">
+          <select class="s-field">
+            <option value="">Tipo de imóvel</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Terreno</option>
+            <option>Sala comercial</option>
+            <option>Loja</option>
+            <option>Galpão</option>
+          </select>
+          <select class="s-field">
+            <option value="">Localidade</option>
+            <option>Pontal do Paraná</option>
+            <option>Matinhos</option>
+            <option>Guaratuba</option>
+            <option>Paranaguá</option>
+          </select>
+          <select class="s-field">
+            <option value="">Faixa de valor</option>
+            <option>Até R$ 200 mil</option>
+            <option>R$ 200 – 400 mil</option>
+            <option>R$ 400 – 700 mil</option>
+            <option>R$ 700 mil – 1,2 mi</option>
+            <option>Acima de R$ 1,2 mi</option>
+          </select>
+          <a href="#residencial" class="btn btn-primary search-btn">Buscar</a>
+        </div>
+      </div>
+
+      <div class="hero-specs">
+        <div><strong>+200</strong><span>Imóveis disponíveis</span></div>
+        <div><strong>18 anos</strong><span>No mercado</span></div>
+        <div><strong>CRECI</strong><span>Registro ativo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATEGORIAS ===================== -->
+<section class="section" id="categorias">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Encontre pelo tipo</span>
+      <h2>O que você está buscando?</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="#residencial" class="cat-card">
+        <img src="img/categorias/casas.jpg" alt="Casas à venda" class="cat-bg-img">
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="eyebrow">Venda</span>
+          <h3>Casas</h3>
+          <span class="count">42 disponíveis</span>
+        </div>
+      </a>
+      <a href="#residencial" class="cat-card">
+        <img src="img/categorias/apartamentos.jpg" alt="Apartamentos à venda" class="cat-bg-img">
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="eyebrow">Venda</span>
+          <h3>Apartamentos</h3>
+          <span class="count">67 disponíveis</span>
+        </div>
+      </a>
+      <a href="#residencial" class="cat-card">
+        <img src="img/categorias/terrenos.jpg" alt="Terrenos à venda" class="cat-bg-img">
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="eyebrow">Venda / Loteamento</span>
+          <h3>Terrenos</h3>
+          <span class="count">39 disponíveis</span>
+        </div>
+      </a>
+      <a href="#comercial" class="cat-card">
+        <img src="img/categorias/comercial.jpg" alt="Imóveis comerciais" class="cat-bg-img">
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="eyebrow">Venda · Locação</span>
+          <h3>Comercial</h3>
+          <span class="count">28 disponíveis</span>
+        </div>
+      </a>
+      <a href="#fazenda" class="cat-card">
+        <img src="img/categorias/fazenda.jpg" alt="Fazendas e chácaras" class="cat-bg-img">
+        <div class="cat-overlay"></div>
+        <div class="cat-label">
+          <span class="eyebrow">Venda · Arrendamento</span>
+          <h3>Fazendas &amp; Chácaras</h3>
+          <span class="count">14 disponíveis</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="topstitch"></div>
+
+<!-- ===================== DESTAQUES RESIDENCIAL ===================== -->
+<section class="section" id="residencial">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Seleção da semana</span>
+      <h2>Imóveis em destaque</h2>
+      <p>Escolhidos pelos nossos corretores — custo-benefício real, sem inflação de preço.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="imovel-card" id="casa-condominio">
+        <div class="thumb">
+          <img src="img/venda/casa-condominio-pontal.jpg" alt="Casa em condomínio em Pontal do Paraná">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Pontal do Paraná</span>
+          <h3>Casa em condomínio — 3 suítes</h3>
+          <div class="imovel-specs">
+            <span>🛏 3 suítes</span>
+            <span>🚗 2 vagas</span>
+            <span>📐 180 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 580.000</strong>
+              <small>ou financie pelo banco</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse na casa em condomínio de 3 suítes em Pontal do Paraná.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="apto-2dorm">
+        <div class="thumb">
+          <img src="img/locacao/apto-beira-mar-matinhos.jpg" alt="Apartamento beira-mar em Matinhos">
+          <span class="badge badge-locacao">Locação</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Matinhos</span>
+          <h3>Apartamento beira-mar — 2 dorms.</h3>
+          <div class="imovel-specs">
+            <span>🛏 2 dorms.</span>
+            <span>🚗 1 vaga</span>
+            <span>📐 72 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 2.800/mês</strong>
+              <small>+ condomínio e IPTU</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse no apartamento beira-mar em Matinhos para locação.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="apto-studio">
+        <div class="thumb">
+          <img src="img/lancamentos/canto-do-mar-guaratuba.jpg" alt="Residencial Canto do Mar em Guaratuba">
+          <span class="badge badge-lancamento">Lançamento</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Guaratuba</span>
+          <h3>Residencial Canto do Mar — Studios</h3>
+          <div class="imovel-specs">
+            <span>🛏 1 dorm.</span>
+            <span>🚗 1 vaga</span>
+            <span>📐 42 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>A partir de R$ 195.000</strong>
+              <small>entrega dez/2026</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Quero informações sobre o Residencial Canto do Mar em Guaratuba.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="terreno-loteamento">
+        <div class="thumb">
+          <img src="img/venda/terreno-loteamento-paranagua.jpg" alt="Terreno em loteamento fechado em Paranaguá">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Paranaguá</span>
+          <h3>Terreno em loteamento fechado</h3>
+          <div class="imovel-specs">
+            <span>📐 360 m²</span>
+            <span>🌳 Área verde</span>
+            <span>🔐 Segurança 24h</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 120.000</strong>
+              <small>financiamento disponível</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse no terreno em loteamento fechado em Paranaguá.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section class="section specsheet">
+
+<!-- âncoras para subcategorias sem seção própria ainda -->
+<span id="casas" style="display:none"></span>
+<span id="apartamentos" style="display:none"></span>
+<span id="terrenos" style="display:none"></span>
+<span id="terreno-urbano" style="display:none"></span>
+<span id="terreno-condominio" style="display:none"></span>
+<span id="apto-1dorm" style="display:none"></span>
+<span id="apto-3dorm" style="display:none"></span>
+<span id="apto-cobertura" style="display:none"></span>
+<span id="comercial" style="display:none"></span>
+<span id="comercial-salas" style="display:none"></span>
+<span id="comercial-pontos" style="display:none"></span>
+<span id="sala-comercial" style="display:none"></span>
+<span id="sala-conjunto" style="display:none"></span>
+<span id="sala-andar" style="display:none"></span>
+<span id="loja-galeria" style="display:none"></span>
+<span id="loja-rua" style="display:none"></span>
+<span id="galpao" style="display:none"></span>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Por que escolher a Horizonte</span>
+      <h2>Transparência em cada etapa</h2>
+    </div>
+    <div class="spec-grid">
+      <div class="spec-item">
+        <strong>CRECI</strong>
+        <span>Registro ativo e regular no conselho</span>
+      </div>
+      <div class="spec-item">
+        <strong>+18 anos</strong>
+        <span>De experiência no litoral do Paraná</span>
+      </div>
+      <div class="spec-item">
+        <strong>+600</strong>
+        <span>Negócios concluídos com sucesso</span>
+      </div>
+      <div class="spec-item">
+        <strong>0 taxa</strong>
+        <span>Para o comprador na maioria dos imóveis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="topstitch on-dark" style="background-color:var(--navy);"></div>
+
+<!-- ===================== LANÇAMENTOS ===================== -->
+<section class="section" id="lancamentos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Novidades</span>
+      <h2>Lançamentos</h2>
+      <p>Empreendimentos recentes — planta, memorial descritivo e condições especiais para primeiros compradores.</p>
+    </div>
+
+    <div class="lancamentos-grid">
+      <div class="lanc-card">
+        <img src="img/lancamentos/canto-do-mar-guaratuba.jpg" alt="Residencial Canto do Mar" class="lanc-thumb-img">
+        <div class="lanc-info">
+          <span class="eyebrow">Lançamento · Entrega dez/2026</span>
+          <h3>Residencial Canto do Mar</h3>
+          <p>Studios e apartamentos de 1 dorm. a 300m da praia em Guaratuba. Piscina, academia, coworking.</p>
+          <div class="lanc-meta">
+            <span class="lanc-price">A partir de R$ 195.000</span>
+            <a href="#" class="btn btn-primary btn-sm" data-wa="5541997075291" data-wa-msg="Quero saber mais sobre o Residencial Canto do Mar.">Quero saber mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="lanc-card">
+        <img src="img/venda/casa-moderna.jpg" alt="Casa Moderna em Pontal do Sul" class="lanc-thumb-img">
+        <div class="lanc-info">
+          <span class="eyebrow">Lançamento · Entrega mar/2027</span>
+          <h3>Residencial Pontal do Sul</h3>
+          <p>Casas modernas em condomínio fechado com 3 dormitórios e quintal privativo. Localização privilegiada em Pontal do Sul.</p>
+          <div class="lanc-meta">
+            <span class="lanc-price">A partir de R$ 490.000</span>
+            <a href="#" class="btn btn-primary btn-sm" data-wa="5541997075291" data-wa-msg="Quero saber mais sobre o Residencial Pontal do Sul.">Quero saber mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE / CORRETORES ===================== -->
+<section class="section sobre-section" id="sobre">
+  <div class="container sobre-grid">
+    <div class="sobre-copy">
+      <span class="eyebrow">Quem somos</span>
+      <h2>Uma imobiliária do litoral, que conhece o litoral.</h2>
+      <p>Desde 2006 ajudamos famílias e investidores a encontrar o imóvel certo no litoral do Paraná. Nossa equipe mora na região, conhece cada bairro e fala com você de forma direta — sem enrolação.</p>
+      <ul class="sobre-lista">
+        <li><span class="check">✓</span> Corretores especializados por cidade</li>
+        <li><span class="check">✓</span> Assessoria jurídica inclusa na negociação</li>
+        <li><span class="check">✓</span> Apoio na simulação de financiamento</li>
+        <li><span class="check">✓</span> Visitas agendadas no horário que você preferir</li>
+      </ul>
+      <a href="#" class="btn btn-ghost" data-wa="5541997075291" data-wa-msg="Olá! Gostaria de falar com um corretor.">Falar com um corretor</a>
+    </div>
+    <div class="sobre-art" aria-hidden="true">
+      <div class="sobre-art-block">
+        <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+          <!-- ilustração de planta baixa estilizada -->
+          <rect x="30" y="30" width="360" height="320" rx="4" fill="none" stroke="#C8A96E" stroke-width="2" stroke-dasharray="6 4"/>
+          <!-- ambiente 1 -->
+          <rect x="50" y="50" width="160" height="120" rx="2" fill="#F0EBE0" stroke="#C8A96E" stroke-width="1.5"/>
+          <text x="130" y="115" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8B7355">SALA</text>
+          <!-- ambiente 2 -->
+          <rect x="50" y="190" width="160" height="140" rx="2" fill="#F0EBE0" stroke="#C8A96E" stroke-width="1.5"/>
+          <text x="130" y="265" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8B7355">COZINHA</text>
+          <!-- ambiente 3 -->
+          <rect x="230" y="50" width="140" height="110" rx="2" fill="#F0EBE0" stroke="#C8A96E" stroke-width="1.5"/>
+          <text x="300" y="110" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8B7355">SUÍTE</text>
+          <!-- ambiente 4 -->
+          <rect x="230" y="180" width="140" height="80" rx="2" fill="#F0EBE0" stroke="#C8A96E" stroke-width="1.5"/>
+          <text x="300" y="225" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8B7355">DORMITÓRIO</text>
+          <!-- ambiente 5 -->
+          <rect x="230" y="280" width="140" height="70" rx="2" fill="#F0EBE0" stroke="#C8A96E" stroke-width="1.5"/>
+          <text x="300" y="319" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#8B7355">BANHEIRO</text>
+          <!-- porta indicativa -->
+          <path d="M 210 50 A 20 20 0 0 1 230 70" fill="none" stroke="#C8A96E" stroke-width="1.2"/>
+          <line x1="210" y1="50" x2="210" y2="70" stroke="#C8A96E" stroke-width="1.2"/>
+          <!-- indicação norte -->
+          <circle cx="380" cy="50" r="14" fill="none" stroke="#C8A96E" stroke-width="1.2"/>
+          <text x="380" y="54" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#C8A96E" font-weight="600">N</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="topstitch"></div>
+
+<!-- ===================== LOCAÇÕES ===================== -->
+<section class="section" id="locacao">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Para quem quer alugar</span>
+      <h2>Locação com segurança</h2>
+      <p>Contratos claros, vistoria detalhada, garantia locatícia flexível.</p>
+    </div>
+    <div class="locacao-grid">
+      <div class="locacao-item">
+        <div class="locacao-icon">🏠</div>
+        <h4>Residencial</h4>
+        <p>Casas e apartamentos com contrato padrão CRECI, vistoria em vídeo e suporte durante toda a locação.</p>
+      </div>
+      <div class="locacao-item">
+        <div class="locacao-icon">🏢</div>
+        <h4>Comercial</h4>
+        <p>Salas e pontos com contrato personalizado, laudos de vistoria e suporte jurídico para renovação.</p>
+      </div>
+      <div class="locacao-item">
+        <div class="locacao-icon">🌊</div>
+        <h4>Temporada</h4>
+        <p>Imóveis de praia para temporada — contrato simplificado, check-in digital e atendimento 7 dias por semana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEMPORADA (CASAS DE PRAIA) ===================== -->
+<section class="section" id="temporada">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Para curtir o litoral</span>
+      <h2>Casas de Praia</h2>
+      <p>Imóveis à beira-mar para compra, locação de temporada ou moradia permanente.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="imovel-card" id="casa-praia-1">
+        <div class="thumb">
+          <img src="img/temporada/casa-praia-01.jpg" alt="Casa de praia">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Pontal do Paraná</span>
+          <h3>Casa de praia — 4 quartos</h3>
+          <div class="imovel-specs">
+            <span>🛏 4 quartos</span>
+            <span>🚗 2 vagas</span>
+            <span>📐 210 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 750.000</strong>
+              <small>a 200m da praia</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse na casa de praia com 4 quartos em Pontal do Paraná.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="casa-praia-2">
+        <div class="thumb">
+          <img src="img/temporada/casa-praia-02.jpg" alt="Casa de praia">
+          <span class="badge badge-locacao">Temporada</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Matinhos</span>
+          <h3>Casa de temporada — 3 quartos</h3>
+          <div class="imovel-specs">
+            <span>🛏 3 quartos</span>
+            <span>🏊 Piscina</span>
+            <span>📐 150 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 1.200/dia</strong>
+              <small>temporada de verão</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse na casa de temporada com piscina em Matinhos.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="praia-vista">
+        <div class="thumb">
+          <img src="img/temporada/praia-01.jpg" alt="Vista da praia">
+          <span class="badge badge-locacao">Temporada</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Guaratuba</span>
+          <h3>Apto frente ao mar — 2 quartos</h3>
+          <div class="imovel-specs">
+            <span>🛏 2 quartos</span>
+            <span>🌊 Frente ao mar</span>
+            <span>📐 80 m²</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 800/dia</strong>
+              <small>temporada de verão</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse no apartamento frente ao mar em Guaratuba para temporada.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAZENDAS & CHÁCARAS ===================== -->
+<section class="section" id="fazenda">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Zona rural</span>
+      <h2>Fazendas &amp; Chácaras</h2>
+      <p>Propriedades rurais com estrutura completa — para moradia, lazer ou investimento no campo.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="imovel-card" id="casa-independente">
+        <div class="thumb">
+          <img src="img/fazenda/fazenda-01.jpg" alt="Fazenda à venda">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Região de Paranaguá</span>
+          <h3>Fazenda com casa sede — 12 alqueires</h3>
+          <div class="imovel-specs">
+            <span>🌾 12 alqueires</span>
+            <span>🏠 Casa sede</span>
+            <span>💧 Nascente</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 980.000</strong>
+              <small>financiamento disponível</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse na fazenda com casa sede de 12 alqueires.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="chacara">
+        <div class="thumb">
+          <img src="img/fazenda/chacara-01.jpg" alt="Chácara à venda">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Guaratuba</span>
+          <h3>Chácara com piscina e pomar</h3>
+          <div class="imovel-specs">
+            <span>🌳 3.500 m²</span>
+            <span>🏠 3 quartos</span>
+            <span>🏊 Piscina</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 320.000</strong>
+              <small>aceita proposta</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse na chácara com piscina em Guaratuba.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="imovel-card" id="sitio">
+        <div class="thumb">
+          <img src="img/fazenda/sitio-01.jpg" alt="Sítio à venda">
+          <span class="badge badge-venda">Venda</span>
+        </div>
+        <div class="imovel-body">
+          <span class="imovel-local">📍 Matinhos</span>
+          <h3>Sítio com rio — ideal para lazer</h3>
+          <div class="imovel-specs">
+            <span>🌊 Rio na divisa</span>
+            <span>🌳 2 alqueires</span>
+            <span>🏠 Casa simples</span>
+          </div>
+          <div class="imovel-meta">
+            <div class="imovel-price">
+              <strong>R$ 210.000</strong>
+              <small>financiamento disponível</small>
+            </div>
+            <a href="#" class="icon-wa" data-wa="5541997075291" data-wa-msg="Olá! Tenho interesse no sítio com rio em Matinhos.">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="cta-strip" id="contato">
+  <div class="container">
+    <h2>Pronto para dar o próximo passo?</h2>
+    <p>Fale com um corretor agora — sem compromisso, sem pressão.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-whatsapp" data-wa="5541997075291" data-wa-msg="Olá! Vim pelo site e gostaria de falar com um corretor.">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+        Conversar no WhatsApp
+      </a>
+      <a href="tel:+5541997075291" class="btn btn-ghost-light">Ligar agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a href="#topo" class="logo logo-text">
+        <span class="logo-small">Horizonte</span>
+        <span class="logo-big">Imóveis</span>
+      </a>
+      <p style="margin-top:12px; font-size:.85rem; max-width:280px; color: var(--sand-dim);">Especialistas em imóveis no litoral do Paraná desde 2006. CRECI-PR 00000-J.</p>
+    </div>
+    <div>
+      <h4>Imóveis</h4>
+      <ul>
+        <li><a href="#residencial">Casas</a></li>
+        <li><a href="#residencial">Apartamentos</a></li>
+        <li><a href="#residencial">Terrenos</a></li>
+        <li><a href="#comercial">Comerciais</a></li>
+        <li><a href="#lancamentos">Lançamentos</a></li>
+        <li><a href="#fazenda">Fazendas &amp; Chácaras</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#locacao">Locação</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fale conosco</h4>
+      <ul>
+        <li><a href="tel:+5541997075291">(41) 99707-5291</a></li>
+        <li><a href="#" data-wa="5541997075291">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/heitorsalvador100/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:contato@horizonteimoveis.com.br">E-mail</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>Horizonte Imóveis LTDA · CRECI-PR 00000-J</span>
+    <span>© 2026 — Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<!-- botão flutuante WhatsApp -->
+<a href="#" class="wa-float" data-wa="5541997075291" aria-label="Falar no WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 00-10.4 18l-1.6 6 6.2-1.6A12 12 0 1012 0zm0 21.8a9.8 9.8 0 01-5-1.4l-.36-.21-3.68.96.98-3.58-.23-.37a9.8 9.8 0 1112.4 5.6 9.7 9.7 0 01-4.1.99zm5.4-7.3c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.34.45-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.58-.48-.5-.66-.5h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.5 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.3.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>

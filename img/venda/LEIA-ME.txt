@@ -1,0 +1,8 @@
+PASTA: img/venda/
+Fotos dos imoveis A VENDA nos cards de destaque.
+
+Arquivos esperados:
+  casa-condominio-pontal.jpg
+  terreno-loteamento-paranagua.jpg
+
+Tamanho ideal: 600 x 400 px

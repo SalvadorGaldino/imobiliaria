@@ -1,0 +1,5 @@
+PASTA: img/temporada/
+Fotos de imoveis de TEMPORADA (praia, veraneio).
+Use quando adicionar cards de temporada.
+
+Tamanho ideal: 600 x 400 px

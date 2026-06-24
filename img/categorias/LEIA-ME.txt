@@ -1,0 +1,10 @@
+PASTA: img/categorias/
+Fotos dos 4 blocos na secao de categorias.
+
+Arquivos esperados:
+  casas.jpg
+  apartamentos.jpg
+  terrenos.jpg
+  comercial.jpg
+
+Tamanho ideal: 600 x 450 px
