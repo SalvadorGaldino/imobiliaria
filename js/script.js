@@ -78,6 +78,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Botão flutuante "voltar ao topo"
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop){
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 480){ backToTop.classList.add("show"); }
+      else { backToTop.classList.remove("show"); }
+    });
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   // Tabs de busca no hero (Comprar / Alugar / Lançamento)
   document.querySelectorAll(".stab").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -86,6 +98,132 @@ document.addEventListener("DOMContentLoaded", () => {
       // aqui você pode filtrar os imóveis conforme a tab ativa
       // por enquanto só troca o estilo visual
     });
+  });
+
+  // ===================== SCROLL REVEAL =====================
+  // Marca cards e seções para animação de entrada suave
+  document.querySelectorAll(".imovel-card, .cat-card, .lanc-card, .locacao-item, .spec-item")
+    .forEach(el => el.classList.add("reveal"));
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReducedMotion && "IntersectionObserver" in window){
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting){
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("show"));
+  }
+
+  // ===================== CONTADORES ANIMADOS =====================
+  function animateCounter(el){
+    const target = parseInt(el.getAttribute("data-count"), 10) || 0;
+    const suffix = el.getAttribute("data-suffix") || "";
+    const duration = 1400;
+    const start = performance.now();
+
+    function tick(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3); // ease-out
+      const value = Math.round(target * eased);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const counters = document.querySelectorAll(".counter");
+  if (counters.length){
+    if (!prefersReducedMotion && "IntersectionObserver" in window){
+      const counterObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      counters.forEach(el => counterObserver.observe(el));
+    } else {
+      counters.forEach(el => {
+        el.textContent = (el.getAttribute("data-count") || "0") + (el.getAttribute("data-suffix") || "");
+      });
+    }
+  }
+
+  // ===================== FAVORITAR E COMPARTILHAR =====================
+  // Favoritos salvos no navegador (localStorage)
+  const FAV_KEY = "horizonte:favoritos";
+  function getFavoritos(){
+    try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; }
+    catch { return []; }
+  }
+  function salvarFavoritos(lista){
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(lista)); } catch {}
+  }
+
+  document.querySelectorAll(".imovel-card").forEach(card => {
+    const meta = card.querySelector(".imovel-meta");
+    if (!meta) return;
+
+    const cardId = card.id || ("imovel-" + Math.random().toString(36).slice(2, 8));
+    const titulo = card.querySelector("h3")?.textContent?.trim() || "este imóvel";
+
+    const wrap = document.createElement("div");
+    wrap.className = "imovel-meta-top";
+
+    // botão favoritar
+    const favBtn = document.createElement("button");
+    favBtn.type = "button";
+    favBtn.className = "card-icon-btn card-fav";
+    favBtn.setAttribute("aria-label", "Favoritar imóvel: " + titulo);
+    favBtn.textContent = getFavoritos().includes(cardId) ? "♥" : "♡";
+    if (getFavoritos().includes(cardId)) favBtn.classList.add("is-fav");
+
+    favBtn.addEventListener("click", () => {
+      let favoritos = getFavoritos();
+      if (favoritos.includes(cardId)){
+        favoritos = favoritos.filter(id => id !== cardId);
+        favBtn.classList.remove("is-fav");
+        favBtn.textContent = "♡";
+      } else {
+        favoritos.push(cardId);
+        favBtn.classList.add("is-fav");
+        favBtn.textContent = "♥";
+      }
+      salvarFavoritos(favoritos);
+    });
+
+    // botão compartilhar
+    const shareBtn = document.createElement("button");
+    shareBtn.type = "button";
+    shareBtn.className = "card-icon-btn card-share";
+    shareBtn.setAttribute("aria-label", "Compartilhar imóvel: " + titulo);
+    shareBtn.textContent = "↗";
+
+    shareBtn.addEventListener("click", async () => {
+      const shareData = {
+        title: titulo,
+        text: `Confira este imóvel na Horizonte Imóveis: ${titulo}`,
+        url: window.location.href.split("#")[0] + "#" + cardId
+      };
+      if (navigator.share){
+        try { await navigator.share(shareData); } catch {}
+      } else {
+        const link = encodeURIComponent(shareData.url);
+        const texto = encodeURIComponent(shareData.text);
+        window.open(`https://wa.me/?text=${texto}%20${link}`, "_blank", "noopener");
+      }
+    });
+
+    wrap.appendChild(favBtn);
+    wrap.appendChild(shareBtn);
+    card.insertBefore(wrap, card.querySelector(".thumb").nextSibling);
   });
 
 });
